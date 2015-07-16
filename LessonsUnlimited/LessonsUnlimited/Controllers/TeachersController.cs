@@ -1,62 +1,54 @@
-﻿using MVCDropDownHelpers.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MVCDropDownHelpers.Controllers
+namespace LessonsUnlimited.Controllers
 {
-    public class StoreController : Controller
+    public class TeachersController : Controller
     {
-        
-        
-        // GET: Store
-        public ActionResult Index(string name)
+        // GET: Teachers
+        public ActionResult Index()
         {
-            if (name=="Tesla")
-            {
-                return Json(false);
-            }
-            else
-            {
-                return Json(true);
-            }
-            //return Json(name == "Tesla"? false: true);
+            return View();
         }
 
-        // GET: Store/Details/5
+        // GET: Teachers/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Store/Create
+        // GET: Teachers/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Store/Create
+        // POST: Teachers/Create
         [HttpPost]
-        public ActionResult Create(Product product )
+        public ActionResult Create(FormCollection collection)
         {
-            if (ModelState.IsValid)
+            try
             {
+                // TODO: Add insert logic here
+
                 return RedirectToAction("Index");
             }
-
+            catch
+            {
                 return View();
-            
+            }
         }
 
-        // GET: Store/Edit/5
+        // GET: Teachers/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Store/Edit/5
+        // POST: Teachers/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -72,13 +64,13 @@ namespace MVCDropDownHelpers.Controllers
             }
         }
 
-        // GET: Store/Delete/5
+        // GET: Teachers/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Store/Delete/5
+        // POST: Teachers/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

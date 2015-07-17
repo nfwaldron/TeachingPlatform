@@ -160,19 +160,53 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LessonsController.cs" />
-    <Compile Include="Controllers\LessonsUnlimitedDBController.cs" />
+    <Compile Include="Controllers\LessonsDBController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MembersDBController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507170441178_InitialCreate.cs" />
+    <Compile Include="Migrations\201507170441178_InitialCreate.Designer.cs">
+      <DependentUpon>201507170441178_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507170538487_newMigration.cs" />
+    <Compile Include="Migrations\201507170538487_newMigration.Designer.cs">
+      <DependentUpon>201507170538487_newMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507170805090_newMigration1.cs" />
+    <Compile Include="Migrations\201507170805090_newMigration1.Designer.cs">
+      <DependentUpon>201507170805090_newMigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507170813122_newMigration2.cs" />
+    <Compile Include="Migrations\201507170813122_newMigration2.Designer.cs">
+      <DependentUpon>201507170813122_newMigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507170818167_newMigration3.cs" />
+    <Compile Include="Migrations\201507170818167_newMigration3.Designer.cs">
+      <DependentUpon>201507170818167_newMigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507170852505_newMigration4.cs" />
+    <Compile Include="Migrations\201507170852505_newMigration4.Designer.cs">
+      <DependentUpon>201507170852505_newMigration4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507171826475_newMigration5.cs" />
+    <Compile Include="Migrations\201507171826475_newMigration5.Designer.cs">
+      <DependentUpon>201507171826475_newMigration5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507171843221_newMigration6.cs" />
+    <Compile Include="Migrations\201507171843221_newMigration6.Designer.cs">
+      <DependentUpon>201507171843221_newMigration6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\DatabaseInitializer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Lesson.cs" />
-    <Compile Include="Models\LessonsUnlimitedDB.cs" />
+    <Compile Include="Models\LessonsUnlimitedDataContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,7 +234,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -238,6 +274,9 @@
     <Content Include="Views\Students\Index.cshtml" />
     <Content Include="Views\Teachers\Index.cshtml" />
     <Content Include="Views\Home\HowItWorks.cshtml" />
+    <Content Include="Views\MembersDB\Create.cshtml" />
+    <Content Include="Views\MembersDB\Index.cshtml" />
+    <Content Include="Views\MembersDB\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -248,6 +287,32 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507170441178_InitialCreate.resx">
+      <DependentUpon>201507170441178_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507170538487_newMigration.resx">
+      <DependentUpon>201507170538487_newMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507170805090_newMigration1.resx">
+      <DependentUpon>201507170805090_newMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507170813122_newMigration2.resx">
+      <DependentUpon>201507170813122_newMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507170818167_newMigration3.resx">
+      <DependentUpon>201507170818167_newMigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507170852505_newMigration4.resx">
+      <DependentUpon>201507170852505_newMigration4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507171826475_newMigration5.resx">
+      <DependentUpon>201507171826475_newMigration5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507171843221_newMigration6.resx">
+      <DependentUpon>201507171843221_newMigration6.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

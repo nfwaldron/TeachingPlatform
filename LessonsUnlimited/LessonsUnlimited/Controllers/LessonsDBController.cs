@@ -1,5 +1,4 @@
-﻿using LessonsUnlimited.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,35 +6,27 @@ using System.Web.Mvc;
 
 namespace LessonsUnlimited.Controllers
 {
-    public class LessonsUnlimitedDBController : Controller
+    public class LessonsDBController : Controller
     {
-        //_db acts as a gateway that permits access to the database through the class
-        // LessonsUnlimitedDataContext. This has the private access modified because we do not
-        // want user to have access to our database through our controller.
-
-        private LessonsUnlimitedDataContext _db = new LessonsUnlimitedDataContext(); 
-
-        // GET: LessonsUnlimitedDB
+        // GET: Lessons
         public ActionResult Index()
         {
-            var dataBase = from d in _db select d; 
-
             return View();
         }
 
-        // GET: LessonsUnlimitedDB/Details/5
+        // GET: Lessons/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: LessonsUnlimitedDB/Create
+        // GET: Lessons/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: LessonsUnlimitedDB/Create
+        // POST: Lessons/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -51,13 +42,13 @@ namespace LessonsUnlimited.Controllers
             }
         }
 
-        // GET: LessonsUnlimitedDB/Edit/5
+        // GET: Lessons/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: LessonsUnlimitedDB/Edit/5
+        // POST: Lessons/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -73,13 +64,13 @@ namespace LessonsUnlimited.Controllers
             }
         }
 
-        // GET: LessonsUnlimitedDB/Delete/5
+        // GET: Lessons/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: LessonsUnlimitedDB/Delete/5
+        // POST: Lessons/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

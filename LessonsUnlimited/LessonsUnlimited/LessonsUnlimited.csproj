@@ -277,6 +277,7 @@
     <Content Include="Views\MembersDB\Create.cshtml" />
     <Content Include="Views\MembersDB\Index.cshtml" />
     <Content Include="Views\MembersDB\Edit.cshtml" />
+    <Content Include="Views\MembersDB\DeleteReally.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -14,9 +14,10 @@ namespace LessonsUnlimited.Controllers
 
         
         //Access database and perform CRUD operations on Lessons.
-        public ActionResult ValidateUserName(string username)
+        public ActionResult ValidateUserName(Member member)
         {
-            var userCount = (from m in _db.Member where m.UserName == username select m).Count();
+            
+            var userCount = (from m in _db.Member where m.UserName == member.UserName && m.Id != member.Id  select m).Count();
             
             // If it finds the username it returns true, if not, false
             return Json((userCount==0 ? true : false));

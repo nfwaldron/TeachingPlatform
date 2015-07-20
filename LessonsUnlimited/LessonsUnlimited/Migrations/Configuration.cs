@@ -47,7 +47,12 @@ namespace LessonsUnlimited.Migrations
 
             context.Member.AddOrUpdate(model => model.UserName, members);
 
-            // do the same thing for lessons here
+            var lessons = new Lesson[]
+            {
+                new Lesson{LessonTitle="Cycle of Fourths", Author="Riley Hagan", Description="Master the Cycle of Fourths!"},
+                new Lesson{LessonTitle = "1-3-5-7", }
+            };
+
 
         }
     }

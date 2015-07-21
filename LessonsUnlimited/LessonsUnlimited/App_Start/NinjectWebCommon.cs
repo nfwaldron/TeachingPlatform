@@ -11,6 +11,7 @@ namespace LessonsUnlimited.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using CoderCamps;
+    using LessonsUnlimited.Services;
 
     public static class NinjectWebCommon 
     {
@@ -63,6 +64,8 @@ namespace LessonsUnlimited.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IGenericRepository>().To<GenericRepository>();
+            kernel.Bind<IMemberServices>().To<MemberServices>();
+            kernel.Bind<ILessonServices>().To<LessonServices>();
 
         }        
     }

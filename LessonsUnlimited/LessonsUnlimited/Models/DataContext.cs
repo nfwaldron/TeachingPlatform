@@ -11,7 +11,7 @@ namespace LessonsUnlimited.Models
     public class DataContext: DbContext
     {
         //Disable lazy loading by enabling the following.
-        public DataContext ():base ("LessonsUnlimitedDB")
+        public DataContext ()
 	    {
             this.Configuration.LazyLoadingEnabled = false;
 

@@ -8,10 +8,10 @@ using System.Web;
 namespace LessonsUnlimited.Models
 {
     // Create Infrastructure to interact with database
-    public class LessonsUnlimitedDataContext: DbContext
+    public class DataContext: DbContext
     {
         //Disable lazy loading by enabling the following.
-        public LessonsUnlimitedDataContext ():base ("LessonsUnlimitedDB")
+        public DataContext ():base ("LessonsUnlimitedDB")
 	    {
             this.Configuration.LazyLoadingEnabled = false;
 

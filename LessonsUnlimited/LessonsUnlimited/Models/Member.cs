@@ -25,11 +25,6 @@ namespace LessonsUnlimited.Models
         [Required(ErrorMessage = "Email is required")]
         public string Email { get; set; }
 
-        //Why can't I add these to the database??
-
-        //public Address BillingAddress { get; set; }
-        //public Address ShippingAddress { get; set; }
-
         [DataType(DataType.Password)]
         [Required(ErrorMessage="Password Required!")]
         public string Password { get; set; }
@@ -43,6 +38,17 @@ namespace LessonsUnlimited.Models
         // I WANT TO BE ABLE TO SAY WHETHER THE MEMBER IS A TEACHER OR A STUDENT
 
         //public string MemberType { get; set; }
+
+        
+        //public ActionResult ValidateUserName(Member member)
+        //{
+
+        //    var userCount = (from m in _db.Member where m.UserName == member.UserName && m.Id != member.Id select m).Count();
+
+        //    // If it finds the username it returns true, if not, false
+        //    return Json((userCount == 0 ? true : false));
+
+        //}
 
     }
 }

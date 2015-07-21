@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace LessonsUnlimited.Models
+namespace LessonsUnlimited.Services
 {
-    // Seed Database
-    public class DatabaseInitializer
+    public class MemberServices
     {
 
     }

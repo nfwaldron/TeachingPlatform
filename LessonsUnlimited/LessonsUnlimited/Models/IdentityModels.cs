@@ -12,10 +12,10 @@ namespace LessonsUnlimited.Models
     {
         // ALL CUSTOM USER PROPERTIES ARE PLACED HERE
         
-        [Required(ErrorMessage = "First name is required")]
+        //[Required(ErrorMessage = "First name is required")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Last name is required")]
+        //[Required(ErrorMessage = "Last name is required")]
         public string LastName { get; set; }
         
 
@@ -43,6 +43,6 @@ namespace LessonsUnlimited.Models
 
         //Next Create the entities that we want to store in our database
         public IDbSet<Lesson> Lesson { get; set; }
-        public IDbSet<ApplicationUser> Member { get; set; }
+        
     }
 }

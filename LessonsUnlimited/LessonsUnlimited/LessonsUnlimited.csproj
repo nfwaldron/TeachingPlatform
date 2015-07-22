@@ -220,6 +220,14 @@
     <Compile Include="Migrations\201507210807291_newMigration8.Designer.cs">
       <DependentUpon>201507210807291_newMigration8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507220050443_newMigration9.cs" />
+    <Compile Include="Migrations\201507220050443_newMigration9.Designer.cs">
+      <DependentUpon>201507220050443_newMigration9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507220103568_newMigration10.cs" />
+    <Compile Include="Migrations\201507220103568_newMigration10.Designer.cs">
+      <DependentUpon>201507220103568_newMigration10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -292,14 +300,14 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\HowItWorks.cshtml" />
-    <Content Include="Views\Members\Index.cshtml" />
-    <Content Include="Views\Members\Delete.cshtml" />
-    <Content Include="Views\Members\Edit.cshtml" />
-    <Content Include="Views\Members\Create.cshtml" />
     <Content Include="Views\Lessons\Index.cshtml" />
     <Content Include="Views\Lessons\Create.cshtml" />
     <Content Include="Views\Lessons\Edit.cshtml" />
     <Content Include="Views\Lessons\Delete.cshtml" />
+    <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Members\Create.cshtml" />
+    <Content Include="Views\Members\Edit.cshtml" />
+    <Content Include="Views\Members\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -341,6 +349,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201507210807291_newMigration8.resx">
       <DependentUpon>201507210807291_newMigration8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507220050443_newMigration9.resx">
+      <DependentUpon>201507220050443_newMigration9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507220103568_newMigration10.resx">
+      <DependentUpon>201507220103568_newMigration10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

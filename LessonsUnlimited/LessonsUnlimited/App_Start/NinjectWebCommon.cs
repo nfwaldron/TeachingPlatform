@@ -64,7 +64,7 @@ namespace LessonsUnlimited.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IGenericRepository>().To<GenericRepository>();
-            kernel.Bind<IMemberServices>().To<MemberServices>();
+            kernel.Bind<IApplicationUserServices>().To<ApplicationUserServices>();
             kernel.Bind<ILessonServices>().To<LessonServices>();
 
         }        

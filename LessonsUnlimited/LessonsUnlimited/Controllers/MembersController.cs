@@ -11,9 +11,9 @@ namespace LessonsUnlimited.Controllers
     public class MembersController : Controller
     {
         // Create access to the MemberServices interface.
-        private IMemberServices _service;
+        private IApplicationUserServices _service;
 
-        public MembersController( IMemberServices service)
+        public MembersController( IApplicationUserServices service)
         {
             _service = service;
         }
@@ -39,7 +39,7 @@ namespace LessonsUnlimited.Controllers
 
         // POST: Members/Create
         [HttpPost]
-        public ActionResult Create(Member member)
+        public ActionResult Create(ApplicationUser member)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +60,7 @@ namespace LessonsUnlimited.Controllers
         [HttpPost]
         public ActionResult Edit(int? id)
         {
-            if (id.Value == null)
+            if (id == null)
             {
                 return RedirectToAction("Index"); 
             }
@@ -69,7 +69,6 @@ namespace LessonsUnlimited.Controllers
             // in order to access the value of a nullable property, you must access it by
             // propertyName.Value
             var original = _service.Find(id.Value);
-
             return View(original);
 
         }

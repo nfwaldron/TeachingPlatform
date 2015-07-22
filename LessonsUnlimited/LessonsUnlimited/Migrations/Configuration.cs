@@ -1,30 +1,53 @@
 namespace LessonsUnlimited.Migrations
-{
-    using LessonsUnlimited.Models;
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<LessonsUnlimited.Models.DataContext>
-    {
+{
+using LessonsUnlimited.Models;
+
+//REMEMBER TO BRING IN Microsoft.AspNet.Identity
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Linq;
+    using System.Security.Claims;
+
+
+internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
+{
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "LessonsUnlimited.Models.LessonsUnlimitedDataContext";
+            ContextKey = "ApplicationDdContext";
         }
 
-        protected override void Seed(LessonsUnlimited.Models.DataContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
-            var members = new Member[]
-            {
-                new Member {FirstName = "John", LastName = "Doe", UserName="jdoe1" , Email = "johndc@gmail.com", Password="hello", ConfirmPassword="hello"},
-                new Member {FirstName = "John", LastName = "Die", UserName="jdoe2" , Email = "johndl@gmail.com", Password="hello", ConfirmPassword="hello"},
-                new Member {FirstName = "John", LastName = "Dae", UserName="jdoe3" , Email = "johndr@gmail.com", Password="hello", ConfirmPassword="hello"},
-                new Member {FirstName = "John", LastName = "Doo", UserName="jdoe4" , Email = "johndl@gmail.com", Password="hello", ConfirmPassword="hello"}
-            };
+          
 
-            context.Member.AddOrUpdate(model => model.UserName, members);
+            var userStore = new UserStore<ApplicationUser>(context);
+
+           // MAIN API FOR INTERACTIONS WITH USERS IS THE APPLICATIONUSERMANAGER
+            var userManager = new ApplicationUserManager(userStore); //
+            
+
+            // Ensure Stephen
+            var user = userManager.FindByName("Stephen.Walther@CoderCamps.com");
+            
+            if (user == null) 
+            {
+                // create user
+                user = new ApplicationUser 
+                {
+                    UserName = "waldron.nathan@gmail.com",
+                    Email = "waldron.nathan@gmail.com"
+                };
+            userManager.Create(user, "Cspg9xa8!");
+            // add claims
+            userManager.AddClaim(user.Id, new Claim("CanEdit", "true"));
+            userManager.AddClaim(user.Id, new Claim(ClaimTypes.DateOfBirth, "11/28/1988"));
+            }
+
 
            
             var lessons = new Lesson[]
@@ -36,7 +59,7 @@ namespace LessonsUnlimited.Migrations
 
             context.Lesson.AddOrUpdate(model => model.LessonTitle, lessons);
 
-
         }
-    }
+     }
 }
+

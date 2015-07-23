@@ -23,13 +23,10 @@ internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbCon
 
         protected override void Seed(ApplicationDbContext context)
         {
-          
-
             var userStore = new UserStore<ApplicationUser>(context);
 
            // MAIN API FOR INTERACTIONS WITH USERS IS THE APPLICATIONUSERMANAGER
             var userManager = new ApplicationUserManager(userStore); //
-            
 
             // Ensure Stephen
             var user = userManager.FindByName("waldron.nathan@gmail.com");

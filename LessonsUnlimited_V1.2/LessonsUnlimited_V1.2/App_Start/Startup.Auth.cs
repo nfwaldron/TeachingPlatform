@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using LessonsUnlimited_V1._2.Models;
+using System.Configuration;
 
 namespace LessonsUnlimited_V1._2
 {
@@ -57,12 +58,15 @@ namespace LessonsUnlimited_V1._2
             //app.UseFacebookAuthentication(
             //   appId: "",
             //   appSecret: "");
-
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            
+            var GoogleClientId = ConfigurationManager.AppSettings["GoogleClientId"];
+            var GoogleClientSecret = ConfigurationManager.AppSettings["GoogleClientSecret"];
+            
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = GoogleClientId,
+                ClientSecret = GoogleClientSecret
+            });
         }
     }
 }

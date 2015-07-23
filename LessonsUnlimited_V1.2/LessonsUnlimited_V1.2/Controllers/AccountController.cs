@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using LessonsUnlimited.Models;
+using LessonsUnlimited_V1._2.Models;
 
-namespace LessonsUnlimited.Controllers
+namespace LessonsUnlimited_V1._2.Controllers
 {
     [Authorize]
     public class AccountController : Controller
@@ -151,7 +151,7 @@ namespace LessonsUnlimited.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

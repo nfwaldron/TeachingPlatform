@@ -32,22 +32,23 @@ internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbCon
             
 
             // Ensure Stephen
-            var user = userManager.FindByName("Stephen.Walther@CoderCamps.com");
+            var user = userManager.FindByName("waldron.nathan@gmail.com");
             
             if (user == null) 
             {
                 // create user
                 user = new ApplicationUser 
                 {
+                    FirstName = "Nathan",
+                    LastName = "Waldron",
                     UserName = "waldron.nathan@gmail.com",
                     Email = "waldron.nathan@gmail.com"
                 };
-            userManager.Create(user, "Cspg9xa8!");
+            userManager.Create(user, "Secret123!");
             // add claims
             userManager.AddClaim(user.Id, new Claim("CanEdit", "true"));
             userManager.AddClaim(user.Id, new Claim(ClaimTypes.DateOfBirth, "11/28/1988"));
             }
-
 
            
             var lessons = new Lesson[]

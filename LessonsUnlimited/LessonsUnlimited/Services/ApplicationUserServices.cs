@@ -29,16 +29,12 @@ namespace LessonsUnlimited.Services
         }
 
        
-
-
         // Create Member
         public void Create(ApplicationUser member)
         {
             _repo.Add<ApplicationUser>(member);
             _repo.SaveChanges();
         }
-
-
 
         //public ActionResult ValidateUserName(Member member)
         //{

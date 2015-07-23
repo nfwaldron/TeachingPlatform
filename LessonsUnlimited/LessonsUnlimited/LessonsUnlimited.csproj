@@ -228,6 +228,22 @@
     <Compile Include="Migrations\201507220103568_newMigration10.Designer.cs">
       <DependentUpon>201507220103568_newMigration10.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507221640356_newMigration11.cs" />
+    <Compile Include="Migrations\201507221640356_newMigration11.Designer.cs">
+      <DependentUpon>201507221640356_newMigration11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507221643001_newMigration12.cs" />
+    <Compile Include="Migrations\201507221643001_newMigration12.Designer.cs">
+      <DependentUpon>201507221643001_newMigration12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507221644571_newMigration13.cs" />
+    <Compile Include="Migrations\201507221644571_newMigration13.Designer.cs">
+      <DependentUpon>201507221644571_newMigration13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507221647039_newMigration14.cs" />
+    <Compile Include="Migrations\201507221647039_newMigration14.Designer.cs">
+      <DependentUpon>201507221647039_newMigration14.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -304,10 +320,10 @@
     <Content Include="Views\Lessons\Create.cshtml" />
     <Content Include="Views\Lessons\Edit.cshtml" />
     <Content Include="Views\Lessons\Delete.cshtml" />
-    <Content Include="Views\Members\Index.cshtml" />
     <Content Include="Views\Members\Create.cshtml" />
     <Content Include="Views\Members\Edit.cshtml" />
     <Content Include="Views\Members\Delete.cshtml" />
+    <Content Include="Views\Members\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -355,6 +371,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201507220103568_newMigration10.resx">
       <DependentUpon>201507220103568_newMigration10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507221640356_newMigration11.resx">
+      <DependentUpon>201507221640356_newMigration11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507221643001_newMigration12.resx">
+      <DependentUpon>201507221643001_newMigration12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507221644571_newMigration13.resx">
+      <DependentUpon>201507221644571_newMigration13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507221647039_newMigration14.resx">
+      <DependentUpon>201507221647039_newMigration14.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

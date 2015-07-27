@@ -17,36 +17,36 @@ namespace LessonsUnlimited_V1._2.Controllers
             ViewBag.Secret = secret;
             return View();
         }
-        [AllowAnonymous]
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //[AllowAnonymous]
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        [AllowAnonymous]
-        public ActionResult Students()
-        {
-            ViewBag.Message = "Your application description page.";
+        //[AllowAnonymous]
+        //public ActionResult Students()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        [AllowAnonymous]
-        public ActionResult Teachers()
-        {
-            ViewBag.Message = "Your application description page.";
+        //[AllowAnonymous]
+        //public ActionResult Teachers()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        [AllowAnonymous]
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+    //    [AllowAnonymous]
+    //    public ActionResult Contact()
+    //    {
+    //        ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+    //        return View();
+    //    }
     }
 }

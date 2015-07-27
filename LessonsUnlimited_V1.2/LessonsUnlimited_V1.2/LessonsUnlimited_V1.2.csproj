@@ -193,10 +193,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ClaimsHelper.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Migrations\201507230629260_newMigration.cs" />
     <Compile Include="Migrations\201507230629260_newMigration.Designer.cs">
       <DependentUpon>201507230629260_newMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507242113205_new.cs" />
+    <Compile Include="Migrations\201507242113205_new.Designer.cs">
+      <DependentUpon>201507242113205_new.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -209,10 +214,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\11391268_10206716518092010_1382448305346384150_n.jpg" />
+    <Content Include="Assets\56398534B9.jpg" />
+    <Content Include="Assets\F5CE4RRRRY.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\IndexCustom.css" />
     <Content Include="Content\theme.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -225,6 +234,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="appSettings.config" />
+    <None Include="Properties\PublishProfiles\LessonsUnlimited.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -242,7 +252,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -282,6 +294,7 @@
     <Content Include="Views\Lessons\Delete.cshtml" />
     <Content Include="Views\Home\Teachers.cshtml" />
     <Content Include="Views\Home\Students.cshtml" />
+    <Content Include="Views\Lessons\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201507230629260_newMigration.resx">
       <DependentUpon>201507230629260_newMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507242113205_new.resx">
+      <DependentUpon>201507242113205_new.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

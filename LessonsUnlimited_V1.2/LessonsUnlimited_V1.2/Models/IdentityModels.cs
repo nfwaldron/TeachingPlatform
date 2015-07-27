@@ -20,9 +20,6 @@ namespace LessonsUnlimited_V1._2.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        
-       
-        
         public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
         {
             // Disable Lazy-Loading

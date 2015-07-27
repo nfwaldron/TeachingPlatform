@@ -1,4 +1,4 @@
-﻿using CoderCamps;
+﻿ using CoderCamps;
 using LessonsUnlimited_V1._2.Models;
 using System;
 using System.Collections.Generic;
@@ -42,6 +42,7 @@ namespace LessonsUnlimited_V1._2.Services
             // The cache object is a weakly typed dictionary that returns back objects. In order to 
             // fulfill the requirements of this method, we cast lessons asn a IList of Lesson(s).
             return lessons as IList<Lesson>;
+
         }
 
         public Lesson Find(int id)
@@ -51,6 +52,7 @@ namespace LessonsUnlimited_V1._2.Services
 
         public void Create (Lesson lesson)
         {
+            
             _repo.Add<Lesson>(lesson);
             _repo.SaveChanges();
             HttpRuntime.Cache.Remove(LESSONS_CACHE_KEY);
@@ -58,6 +60,8 @@ namespace LessonsUnlimited_V1._2.Services
 
         public void Edit(Lesson lesson)
         {
+            
+            
             var original = this.Find(lesson.Id);
             original.Author = lesson.Author;
             original.Title = lesson.Title;
